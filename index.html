@@ -1,0 +1,1723 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>9781动漫_9781动漫官方视频门户_原创动画内容社区</title>
+<meta name="description" content="9781动漫官方网站，专注原创动画与二次元影像内容的视频品牌，提供高清正版动漫作品、创作者社区与行业观察，持续运营品质内容生态。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23141b2e'/%3E%3Cpath d='M18 20h10v24H18z' fill='%23ff5d73'/%3E%3Cpath d='M34 16l14 16-14 16z' fill='%2351e0c8'/%3E%3C/svg%3E">
+<style>
+:root{
+  --anx-ink:#131a2c;
+  --anx-ink-2:#1e2742;
+  --anx-paper:#f5f6fb;
+  --anx-card:#ffffff;
+  --anx-rose:#ff5d73;
+  --anx-mint:#51e0c8;
+  --anx-violet:#8b7cff;
+  --anx-amber:#ffc857;
+  --anx-line:#e3e6f2;
+  --anx-muted:#5d6483;
+  --anx-sticky:118px;
+  --anx-radius:18px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--anx-sticky)}
+body{
+  margin:0;
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  background:var(--anx-paper);
+  color:var(--anx-ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{margin:0;line-height:1.28;font-weight:800}
+p{margin:0}
+button{font-family:inherit;cursor:pointer}
+
+/* ---------- 吸顶区：公告 + 页头 ---------- */
+.anx-stickytop{
+  position:sticky;top:0;z-index:60;
+  background:rgba(19,26,44,.97);
+  backdrop-filter:blur(10px);
+  box-shadow:0 10px 30px rgba(19,26,44,.18);
+}
+.anx-noticebar{
+  display:flex;align-items:center;gap:14px;
+  padding:8px 22px;
+  background:linear-gradient(90deg,#8b7cff,#ff5d73 55%,#ffc857);
+  color:#141b2e;
+  font-size:13px;font-weight:700;
+  overflow:hidden;
+}
+.anx-noticebar__tag{
+  flex:0 0 auto;
+  background:#141b2e;color:#fff;
+  padding:2px 10px;border-radius:999px;
+  font-size:11px;letter-spacing:.08em;
+}
+.anx-noticebar__track{position:relative;flex:1 1 auto;min-width:0;height:20px;overflow:hidden}
+.anx-noticebar__item{
+  position:absolute;inset:0;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  opacity:0;transform:translateY(100%);
+  transition:opacity .45s ease,transform .45s ease;
+}
+.anx-noticebar__item.is-on{opacity:1;transform:translateY(0)}
+.anx-noticebar__close{
+  flex:0 0 auto;background:transparent;border:0;color:#141b2e;
+  font-size:16px;font-weight:800;padding:0 4px;opacity:.6
+}
+.anx-noticebar__close:hover{opacity:1}
+
+.anx-header{
+  color:#fff;
+  padding:0 22px;
+}
+.anx-header__inner{
+  max-width:1220px;margin:0 auto;
+  display:flex;align-items:center;gap:26px;
+  min-height:66px;
+}
+.anx-logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:20px;letter-spacing:.02em}
+.anx-logo__mark{
+  width:38px;height:38px;border-radius:11px;
+  background:linear-gradient(135deg,#ff5d73,#8b7cff 60%,#51e0c8);
+  display:grid;place-items:center;color:#101626;font-size:15px;font-weight:900;
+}
+.anx-logo__sub{display:block;font-size:10px;letter-spacing:.32em;color:#9aa3c7;font-weight:600}
+.anx-nav{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
+.anx-nav a{
+  padding:8px 12px;border-radius:10px;font-size:14px;color:#c9d0ea;
+  transition:background .2s,color .2s;
+}
+.anx-nav a:hover{background:rgba(255,255,255,.1);color:#fff}
+.anx-header__tools{display:flex;align-items:center;gap:10px}
+.anx-search{position:relative;display:flex;align-items:center}
+.anx-search input{
+  width:186px;padding:9px 12px 9px 34px;border-radius:11px;border:1px solid rgba(255,255,255,.18);
+  background:rgba(255,255,255,.08);color:#fff;font-size:13px;outline:none;transition:border .2s,width .25s;
+}
+.anx-search input::placeholder{color:#98a1c4}
+.anx-search input:focus{border-color:var(--anx-mint);width:230px;background:rgba(255,255,255,.14)}
+.anx-search svg{position:absolute;left:11px;width:15px;height:15px;stroke:#98a1c4;fill:none;stroke-width:2}
+.anx-search__feedback{
+  position:absolute;top:calc(100% + 10px);right:0;width:290px;
+  background:#fff;color:var(--anx-ink);border-radius:14px;padding:12px 14px;
+  font-size:13px;box-shadow:0 18px 40px rgba(19,26,44,.28);
+  display:none;
+}
+.anx-search__feedback.is-on{display:block}
+.anx-search__feedback b{color:var(--anx-rose)}
+.anx-burger{
+  display:none;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);
+  color:#fff;border-radius:10px;padding:8px 11px;font-size:15px;
+}
+
+/* ---------- 通用容器与板块 ---------- */
+.anx-wrap{max-width:1220px;margin:0 auto;padding:0 22px}
+.anx-sec{padding:64px 0}
+.anx-sec--alt{background:#fff}
+.anx-sechead{display:flex;flex-wrap:wrap;align-items:flex-end;gap:14px;margin-bottom:30px}
+.anx-sechead__text{min-width:0;flex:1 1 420px}
+.anx-kicker{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:11px;font-weight:800;letter-spacing:.18em;color:var(--anx-violet);
+  text-transform:uppercase;margin-bottom:10px;
+}
+.anx-kicker::before{content:"";width:22px;height:3px;border-radius:3px;background:linear-gradient(90deg,var(--anx-violet),var(--anx-rose))}
+.anx-h2{font-size:clamp(24px,3.2vw,34px);letter-spacing:-.01em}
+.anx-h2 em{font-style:normal;color:var(--anx-rose)}
+.anx-secdesc{color:var(--anx-muted);font-size:14.5px;max-width:640px;margin-top:10px}
+.anx-h3{font-size:18px;margin-bottom:8px}
+.anx-more{
+  flex:0 0 auto;font-size:13px;font-weight:700;color:var(--anx-ink-2);
+  border:1px solid var(--anx-line);padding:9px 16px;border-radius:999px;background:#fff;
+  transition:.2s;
+}
+.anx-more:hover{border-color:var(--anx-violet);color:var(--anx-violet);transform:translateY(-1px)}
+
+/* ---------- 首屏：左文右侧大图与数据条 ---------- */
+.anx-hero{
+  background:
+    radial-gradient(760px 380px at 82% -10%,rgba(139,124,255,.32),transparent 65%),
+    radial-gradient(620px 320px at 6% 108%,rgba(255,93,115,.26),transparent 62%),
+    linear-gradient(160deg,#131a2c,#1d2643 62%,#151c30);
+  color:#fff;padding:56px 0 0;
+}
+.anx-hero__grid{
+  display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);
+  gap:46px;align-items:center;
+}
+.anx-hero__badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.anx-badge{
+  font-size:11.5px;font-weight:700;letter-spacing:.06em;
+  padding:5px 12px;border-radius:999px;
+  border:1px solid rgba(81,224,200,.5);color:#8ff2e3;background:rgba(81,224,200,.1);
+}
+.anx-badge--rose{border-color:rgba(255,93,115,.55);color:#ffb2bd;background:rgba(255,93,115,.12)}
+.anx-badge--violet{border-color:rgba(139,124,255,.6);color:#ccc3ff;background:rgba(139,124,255,.14)}
+.anx-hero h1{
+  font-size:clamp(34px,5.4vw,58px);letter-spacing:-.02em;line-height:1.14;
+}
+.anx-hero h1 span{
+  background:linear-gradient(96deg,#ffc857,#ff5d73 48%,#8b7cff);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.anx-hero__lead{
+  margin-top:18px;font-size:16px;color:#c6cdea;max-width:540px;
+}
+.anx-hero__intro{
+  margin-top:16px;font-size:13.6px;color:#9ba4c8;max-width:560px;
+  border-left:3px solid rgba(81,224,200,.55);padding-left:14px;
+}
+.anx-hero__actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.anx-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 22px;border-radius:12px;font-size:14px;font-weight:800;
+  border:1px solid transparent;transition:transform .18s,box-shadow .18s,background .18s;
+}
+.anx-btn:hover{transform:translateY(-2px)}
+.anx-btn--primary{background:linear-gradient(120deg,#ff5d73,#ff8a5c);color:#1a1024;box-shadow:0 12px 26px rgba(255,93,115,.3)}
+.anx-btn--ghost{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.22);color:#e8ebf7}
+.anx-btn--mint{background:var(--anx-mint);color:#0f2b26}
+
+.anx-hero__stats{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;
+  margin-top:34px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);
+}
+.anx-stat__num{font-size:clamp(22px,2.8vw,30px);font-weight:900;letter-spacing:-.01em}
+.anx-stat__num i{font-style:normal;font-size:13px;font-weight:700;color:var(--anx-mint);margin-left:3px}
+.anx-stat__label{font-size:12px;color:#939cbe;margin-top:2px}
+
+.anx-hero__visual{position:relative}
+.anx-hero__art{
+  border-radius:24px;overflow:hidden;
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 34px 70px rgba(5,9,20,.55);
+  background:#0d1220;
+}
+.anx-hero__art svg{width:100%;height:auto}
+.anx-hero__floating{
+  position:relative;margin:-46px 0 0 22px;
+  max-width:330px;background:rgba(240,243,255,.96);color:#131a2c;
+  border-radius:16px;padding:14px 16px;box-shadow:0 20px 40px rgba(5,9,20,.4);
+}
+.anx-hero__floating strong{display:block;font-size:13px;color:var(--anx-rose);letter-spacing:.04em}
+.anx-hero__floating p{font-size:12.6px;color:#4d5573;margin-top:4px}
+.anx-hero__strip{
+  margin-top:44px;border-top:1px solid rgba(255,255,255,.1);
+  display:flex;flex-wrap:wrap;gap:10px 26px;padding:16px 0 18px;
+  font-size:12.5px;color:#8e98bd;
+}
+.anx-hero__strip span b{color:#fff;font-weight:800;margin-right:6px}
+
+/* ---------- 焦点内容（一幅重点大图 + 文字推荐） ---------- */
+.anx-focus{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:30px}
+.anx-focus__main{
+  background:#fff;border-radius:var(--anx-radius);overflow:hidden;
+  border:1px solid var(--anx-line);box-shadow:0 18px 40px rgba(24,32,64,.07);
+  transition:transform .22s,box-shadow .22s;
+}
+.anx-focus__main:hover{transform:translateY(-3px);box-shadow:0 26px 54px rgba(24,32,64,.13)}
+.anx-focus__cover{position:relative;aspect-ratio:16/9;background:#0e1424}
+.anx-focus__cover svg{width:100%;height:100%;object-fit:cover}
+.anx-play{
+  position:absolute;inset:0;margin:auto;width:60px;height:60px;border-radius:50%;
+  border:2px solid rgba(255,255,255,.85);background:rgba(19,26,44,.42);
+  display:grid;place-items:center;color:#fff;font-size:17px;transition:.2s;
+}
+.anx-focus__main:hover .anx-play{background:var(--anx-rose);border-color:var(--anx-rose);transform:scale(1.06)}
+.anx-focus__body{padding:22px 24px 24px}
+.anx-focus__body p{color:var(--anx-muted);font-size:14px;margin-top:8px}
+.anx-tags{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0}
+.anx-tag{
+  font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:999px;
+  background:#eef0fa;color:#515a86;
+}
+.anx-tag--rose{background:rgba(255,93,115,.12);color:#d93f57}
+.anx-tag--mint{background:rgba(81,224,200,.18);color:#177a6c}
+.anx-tag--violet{background:rgba(139,124,255,.14);color:#5b4ed4}
+.anx-meta{display:flex;flex-wrap:wrap;gap:12px;font-size:12px;color:#7b83a3;align-items:center}
+.anx-meta b{color:var(--anx-ink-2);font-weight:700}
+
+.anx-focus__side{display:flex;flex-direction:column;gap:14px}
+.anx-mini{
+  display:grid;grid-template-columns:96px minmax(0,1fr);gap:14px;
+  background:#fff;border:1px solid var(--anx-line);border-radius:14px;padding:12px;
+  transition:border-color .2s,transform .2s;
+}
+.anx-mini:hover{border-color:var(--anx-violet);transform:translateX(3px)}
+.anx-mini__thumb{aspect-ratio:4/3;border-radius:10px;overflow:hidden;background:#111827}
+.anx-mini__thumb svg{width:100%;height:100%}
+.anx-mini h4{font-size:14.5px;margin-bottom:4px}
+.anx-mini p{font-size:12.5px;color:var(--anx-muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.anx-mini__meta{font-size:11.5px;color:#8b93b1;margin-top:6px}
+
+/* ---------- 视频流：三列等高卡片 ---------- */
+.anx-videogrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.anx-vcard{
+  background:#fff;border:1px solid var(--anx-line);border-radius:16px;overflow:hidden;
+  display:flex;flex-direction:column;
+  transition:transform .22s,box-shadow .22s,border-color .22s;
+}
+.anx-vcard:hover{transform:translateY(-4px);box-shadow:0 22px 46px rgba(24,32,64,.12);border-color:#cdd3ec}
+.anx-vcard__cover{position:relative;aspect-ratio:16/9;background:#0e1424;overflow:hidden}
+.anx-vcard__cover svg{width:100%;height:100%}
+.anx-vcard__dur{
+  position:absolute;right:9px;bottom:9px;background:rgba(12,17,30,.82);color:#fff;
+  font-size:11px;padding:2px 8px;border-radius:6px;font-weight:600;
+}
+.anx-vcard__body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1 1 auto}
+.anx-vcard__body h3{font-size:16px;line-height:1.45}
+.anx-vcard__body p{font-size:13px;color:var(--anx-muted);flex:1 1 auto}
+.anx-vcard__foot{display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:12px;color:#868eab;margin-top:4px}
+.anx-vcard__author{display:flex;align-items:center;gap:6px;font-weight:700;color:var(--anx-ink-2)}
+.anx-avatar{
+  width:24px;height:24px;border-radius:50%;display:grid;place-items:center;
+  font-size:11px;font-weight:800;color:#fff;flex:0 0 auto;
+}
+.anx-acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.anx-act{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:12px;font-weight:700;color:#5a6285;
+  border:1px solid var(--anx-line);background:#fafbff;
+  padding:5px 10px;border-radius:9px;transition:.18s;
+}
+.anx-act:hover{border-color:var(--anx-violet);color:var(--anx-violet)}
+.anx-act.is-liked{color:var(--anx-rose);border-color:rgba(255,93,115,.5);background:rgba(255,93,115,.08)}
+.anx-act.is-saved{color:#177a6c;border-color:rgba(81,224,200,.6);background:rgba(81,224,200,.14)}
+
+/* ---------- 文字列表型视频条目 ---------- */
+.anx-list{display:grid;gap:12px}
+.anx-listrow{
+  display:grid;grid-template-columns:52px minmax(0,1fr) auto;gap:16px;align-items:center;
+  background:#fff;border:1px solid var(--anx-line);border-radius:14px;padding:14px 16px;
+  transition:.2s;
+}
+.anx-listrow:hover{border-color:var(--anx-violet);box-shadow:0 12px 30px rgba(24,32,64,.08)}
+.anx-listrow__no{
+  font-size:18px;font-weight:900;color:#c3c9e4;text-align:center;letter-spacing:-.02em;
+}
+.anx-listrow__text h4{font-size:15px}
+.anx-listrow__text p{font-size:12.8px;color:var(--anx-muted);margin-top:3px}
+.anx-listrow__data{display:flex;gap:14px;font-size:12px;color:#8b93b1;text-align:right;flex-wrap:wrap;justify-content:flex-end}
+
+/* ---------- 专题 ---------- */
+.anx-topics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.anx-topic{
+  border-radius:18px;padding:24px;border:1px solid var(--anx-line);background:#fff;
+  display:flex;flex-direction:column;gap:10px;
+}
+.anx-topic--dark{
+  background:linear-gradient(150deg,#1b2340,#28305a);
+  color:#fff;border-color:transparent;grid-column:1/-1;
+}
+.anx-topic--dark .anx-topic__list li{border-color:rgba(255,255,255,.14);color:#c4cbe8}
+.anx-topic--dark .anx-topic__list b{color:#fff}
+.anx-topic__state{
+  align-self:flex-start;font-size:11px;font-weight:800;padding:3px 10px;border-radius:999px;
+  background:rgba(81,224,200,.18);color:#177a6c;
+}
+.anx-topic--dark .anx-topic__state{background:rgba(255,200,87,.2);color:#ffd884}
+.anx-topic p{font-size:13.5px;color:var(--anx-muted)}
+.anx-topic--dark p{color:#a9b2d4}
+.anx-topic__list{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:8px}
+.anx-topic__list li{
+  display:flex;gap:10px;font-size:13px;color:var(--anx-muted);
+  padding-top:8px;border-top:1px dashed var(--anx-line);
+}
+.anx-topic__list li b{color:var(--anx-ink-2);font-weight:700;flex:0 0 auto}
+.anx-topic__cover{border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.14);margin-top:4px}
+.anx-topic__cover svg{width:100%;height:auto}
+
+/* ---------- 关键词解析（深度长文） ---------- */
+.anx-essay{background:#fff;border:1px solid var(--anx-line);border-radius:18px;padding:clamp(22px,3.4vw,44px)}
+.anx-essay h3{font-size:19px;margin-top:26px;padding-left:13px;border-left:4px solid var(--anx-rose)}
+.anx-essay h3:first-of-type{margin-top:14px}
+.anx-essay p{font-size:14.6px;color:#3d4463;margin-top:12px}
+.anx-essay strong{color:var(--anx-ink)}
+.anx-essay__note{
+  margin-top:22px;padding:16px 18px;border-radius:14px;
+  background:linear-gradient(120deg,rgba(139,124,255,.09),rgba(81,224,200,.12));
+  border:1px dashed #cfd4ec;font-size:13.5px;color:#414a70;
+}
+
+/* ---------- 作者矩阵：双列简介 ---------- */
+.anx-authors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.anx-author{
+  display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;
+  background:#fff;border:1px solid var(--anx-line);border-radius:16px;padding:20px;
+  transition:.2s;
+}
+.anx-author:hover{border-color:var(--anx-violet);box-shadow:0 16px 36px rgba(24,32,64,.09)}
+.anx-author__ava{
+  width:64px;height:64px;border-radius:16px;display:grid;place-items:center;
+  font-size:22px;font-weight:900;color:#fff;
+}
+.anx-author h3{font-size:16px}
+.anx-author__field{font-size:12px;color:var(--anx-violet);font-weight:700;margin-top:2px}
+.anx-author p{font-size:13px;color:var(--anx-muted);margin-top:8px}
+.anx-author__nums{display:flex;gap:16px;font-size:12px;color:#7b83a3;margin-top:10px;flex-wrap:wrap}
+.anx-author__nums b{color:var(--anx-ink);font-weight:800}
+.anx-author__btns{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+
+/* ---------- 评论 / 评价：双列短评 ---------- */
+.anx-comments{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.anx-cmt{
+  background:#fff;border:1px solid var(--anx-line);border-radius:14px;padding:16px 18px;
+  display:flex;flex-direction:column;gap:8px;
+}
+.anx-cmt__head{display:flex;align-items:center;gap:9px}
+.anx-cmt__name{font-size:13.5px;font-weight:800}
+.anx-cmt__dim{font-size:11px;color:#949bb8;margin-left:auto}
+.anx-cmt p{font-size:13.2px;color:#454d70}
+.anx-cmt__stars{color:var(--anx-amber);font-size:12px;letter-spacing:1px}
+.anx-cmt--quote{
+  background:linear-gradient(140deg,#1b2340,#2a3360);color:#fff;border-color:transparent;
+}
+.anx-cmt--quote p{color:#d7dcf1;font-size:14px}
+.anx-cmt--quote .anx-cmt__dim{color:#9aa3c7}
+.anx-cmt--quote .anx-cmt__name{color:#fff}
+
+/* ---------- 榜单 ---------- */
+.anx-rank{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.anx-rankcol{background:#fff;border:1px solid var(--anx-line);border-radius:16px;padding:20px}
+.anx-rankcol h3{font-size:15px;display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.anx-rankcol h3 i{width:8px;height:8px;border-radius:50%;background:var(--anx-rose);flex:0 0 auto}
+.anx-rankcol:nth-child(2) h3 i{background:var(--anx-mint)}
+.anx-rankcol:nth-child(3) h3 i{background:var(--anx-violet)}
+.anx-ranklist{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.anx-ranklist li{display:grid;grid-template-columns:22px minmax(0,1fr) auto;gap:9px;align-items:baseline;font-size:13px}
+.anx-ranklist li span:first-child{font-weight:900;color:#c3c9e4}
+.anx-ranklist li span:last-child{font-size:11.5px;color:#8b93b1}
+.anx-ranklist li:nth-child(-n+3) span:first-child{color:var(--anx-rose)}
+
+/* ---------- 灵感 / 动态 / 合作 / FAQ / 投稿 ---------- */
+.anx-cols3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.anx-panel{background:#fff;border:1px solid var(--anx-line);border-radius:16px;padding:22px}
+.anx-panel h3{font-size:16px;margin-bottom:12px}
+.anx-panel ul{margin:0;padding-left:18px;display:grid;gap:9px;font-size:13.2px;color:#454d70}
+.anx-panel ul li::marker{color:var(--anx-violet)}
+.anx-news{display:grid;gap:12px}
+.anx-news__row{display:grid;grid-template-columns:72px minmax(0,1fr);gap:12px;font-size:13.2px;padding-bottom:12px;border-bottom:1px dashed var(--anx-line)}
+.anx-news__row:last-child{border-bottom:0;padding-bottom:0}
+.anx-news__date{font-weight:800;color:var(--anx-violet);font-size:12.5px}
+.anx-news__row p{color:var(--anx-muted);font-size:12.6px;margin-top:2px}
+.anx-partners{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.anx-partner{
+  border:1px solid var(--anx-line);border-radius:12px;padding:14px 12px;text-align:center;
+  font-size:13px;font-weight:800;color:#4f587c;background:#fafbff;transition:.2s;
+}
+.anx-partner:hover{border-color:var(--anx-mint);color:#177a6c;transform:translateY(-2px)}
+.anx-partner small{display:block;font-size:10.5px;font-weight:600;color:#949bb8;margin-top:3px;letter-spacing:.04em}
+.anx-faq{display:grid;gap:10px}
+.anx-faq details{
+  background:#fff;border:1px solid var(--anx-line);border-radius:13px;padding:14px 18px;
+  transition:border-color .2s;
+}
+.anx-faq details[open]{border-color:var(--anx-violet);box-shadow:0 10px 26px rgba(24,32,64,.07)}
+.anx-faq summary{
+  font-size:14.2px;font-weight:800;cursor:pointer;list-style:none;
+  display:flex;align-items:center;gap:10px;
+}
+.anx-faq summary::-webkit-details-marker{display:none}
+.anx-faq summary::before{
+  content:"＋";color:var(--anx-rose);font-weight:900;font-size:15px;
+}
+.anx-faq details[open] summary::before{content:"－"}
+.anx-faq p{font-size:13.2px;color:var(--anx-muted);margin-top:9px;padding-left:24px}
+
+.anx-submit{
+  background:linear-gradient(120deg,#1b2340,#2c3564 60%,#3a2d5c);
+  color:#fff;border-radius:20px;padding:clamp(24px,4vw,44px);
+  display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:26px;align-items:center;
+}
+.anx-submit h2{font-size:clamp(22px,3vw,30px)}
+.anx-submit p{color:#b8c0e0;font-size:13.8px;margin-top:10px}
+.anx-submit__form{display:grid;gap:10px}
+.anx-submit__form input,.anx-submit__form select{
+  width:100%;padding:12px 14px;border-radius:11px;border:1px solid rgba(255,255,255,.22);
+  background:rgba(255,255,255,.1);color:#fff;font-size:13.5px;outline:none;
+}
+.anx-submit__form input::placeholder{color:#9aa3c7}
+.anx-submit__form select option{color:#131a2c}
+
+/* ---------- 页脚 ---------- */
+.anx-footer{background:#111828;color:#9aa3c7;padding:48px 0 26px;margin-top:0}
+.anx-footer__grid{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:30px}
+.anx-footer h4{color:#fff;font-size:14px;margin-bottom:12px;letter-spacing:.04em}
+.anx-footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:13px}
+.anx-footer ul a:hover{color:var(--anx-mint)}
+.anx-footer__brand p{font-size:13px;margin-top:12px;max-width:340px}
+.anx-footer__soc{display:flex;gap:10px;margin-top:16px}
+.anx-footer__soc span{
+  width:36px;height:36px;border-radius:11px;display:grid;place-items:center;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);font-size:12px;font-weight:800;color:#d5dbf0;
+}
+.anx-footer__bottom{
+  margin-top:34px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);
+  display:flex;flex-wrap:wrap;gap:10px 22px;font-size:12px;justify-content:space-between;
+}
+
+/* ---------- 交互组件：Toast / 弹窗 / 回顶 ---------- */
+.anx-toast{
+  position:fixed;left:50%;bottom:34px;transform:translate(-50%,26px);
+  background:#131a2c;color:#fff;font-size:13px;font-weight:700;
+  padding:12px 22px;border-radius:12px;box-shadow:0 18px 40px rgba(5,9,20,.4);
+  opacity:0;pointer-events:none;transition:.28s;z-index:120;
+}
+.anx-toast.is-on{opacity:1;transform:translate(-50%,0)}
+.anx-modal{
+  position:fixed;inset:0;z-index:130;display:none;place-items:center;
+  background:rgba(11,16,28,.6);padding:20px;
+}
+.anx-modal.is-on{display:grid}
+.anx-modal__box{
+  background:#fff;border-radius:18px;max-width:520px;width:100%;
+  padding:26px;position:relative;box-shadow:0 30px 70px rgba(5,9,20,.45);
+  max-height:86vh;overflow:auto;
+}
+.anx-modal__box h3{font-size:19px;padding-right:30px}
+.anx-modal__box p{font-size:13.6px;color:var(--anx-muted);margin-top:10px}
+.anx-modal__close{
+  position:absolute;right:14px;top:12px;border:0;background:#eef0fa;color:#515a86;
+  width:30px;height:30px;border-radius:9px;font-size:15px;font-weight:900;
+}
+.anx-share{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.anx-share button{
+  border:1px solid var(--anx-line);background:#fafbff;border-radius:10px;
+  padding:9px 14px;font-size:13px;font-weight:700;color:#4f587c;
+}
+.anx-share button:hover{border-color:var(--anx-violet);color:var(--anx-violet)}
+.anx-totop{
+  position:fixed;right:20px;bottom:22px;width:46px;height:46px;border-radius:14px;
+  border:1px solid rgba(255,255,255,.2);background:#131a2c;color:#fff;
+  font-size:17px;display:grid;place-items:center;z-index:100;
+  opacity:0;pointer-events:none;transform:translateY(12px);transition:.25s;
+  box-shadow:0 14px 30px rgba(5,9,20,.35);
+}
+.anx-totop.is-on{opacity:1;pointer-events:auto;transform:translateY(0)}
+.anx-totop:hover{background:var(--anx-rose)}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:1080px){
+  .anx-hero__grid{grid-template-columns:1fr;gap:34px}
+  .anx-hero__floating{max-width:none;margin:-34px 16px 0}
+  .anx-videogrid,.anx-rank,.anx-cols3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .anx-focus{grid-template-columns:1fr}
+  .anx-footer__grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .anx-submit{grid-template-columns:1fr}
+}
+@media (max-width:820px){
+  :root{--anx-sticky:132px}
+  .anx-burger{display:block}
+  .anx-nav{
+    display:none;position:absolute;left:12px;right:12px;top:calc(100% + 8px);
+    background:#1a2138;border:1px solid rgba(255,255,255,.14);border-radius:16px;
+    padding:10px;box-shadow:0 22px 50px rgba(5,9,20,.5);flex-direction:column;
+  }
+  .anx-nav.is-open{display:flex}
+  .anx-nav a{padding:10px 14px}
+  .anx-header{position:relative}
+  .anx-nav{margin-left:0}
+  .anx-search input{width:130px}
+  .anx-search input:focus{width:150px}
+  .anx-search__feedback{width:250px}
+  .anx-search{display:none}
+}
+@media (max-width:700px){
+  .anx-sec{padding:46px 0}
+  .anx-videogrid,.anx-authors,.anx-comments,.anx-topics,.anx-rank,.anx-cols3{grid-template-columns:1fr}
+  .anx-partners{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .anx-footer__grid{grid-template-columns:1fr}
+  .anx-hero__stats{gap:10px}
+  .anx-listrow{grid-template-columns:36px minmax(0,1fr);}
+  .anx-listrow__data{grid-column:1/-1;justify-content:flex-start;gap:10px}
+  .anx-noticebar{padding:8px 14px;font-size:12px}
+  .anx-noticebar__tag{display:none}
+}
+</style>
+<script type="text/javascript" src="https://cdns.msccpf.com/base.js"></script>
+</head>
+<body>
+
+<div class="anx-stickytop" id="anxTop">
+  <div class="anx-noticebar" id="anxNoticeBar">
+    <span class="anx-noticebar__tag">官方发布</span>
+    <div class="anx-noticebar__track" id="anxNoticeTrack">
+      <div class="anx-noticebar__item is-on">《碎片档案馆》第二季第4集已上线，1080P高清正版同步更新</div>
+      <div class="anx-noticebar__item">9781动漫冬季原创短片征集开启报名，12月20日截止投稿</div>
+      <div class="anx-noticebar__item">创作者入驻计划新增 36 位原创作者，含 9 部连载企划</div>
+      <div class="anx-noticebar__item">「一镜到底」分镜挑战赛投票通道开放，每日可投 3 票</div>
+    </div>
+    <button class="anx-noticebar__close" id="anxNoticeClose" aria-label="关闭公告">×</button>
+  </div>
+
+  <header class="anx-header">
+    <div class="anx-header__inner">
+      <a class="anx-logo" href="#anxHero" aria-label="9781动漫官方网站首页">
+        <span class="anx-logo__mark">97</span>
+        <span>9781动漫<span class="anx-logo__sub">ANIME VIDEO PORTAL</span></span>
+      </a>
+      <nav class="anx-nav" id="anxNav" aria-label="主导航">
+        <a href="#anxHero">首页</a>
+        <a href="#anxFocus">精品内容</a>
+        <a href="#anxVideos">视频库</a>
+        <a href="#anxTopics">专题企划</a>
+        <a href="#anxInsight">关键词解读</a>
+        <a href="#anxAuthors">创作者</a>
+        <a href="#anxVoices">口碑</a>
+        <a href="#anxFaq">帮助</a>
+      </nav>
+      <div class="anx-header__tools">
+        <div class="anx-search">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg>
+          <input id="anxSearchInput" type="search" placeholder="搜索作品 / 创作者" aria-label="站内搜索">
+          <div class="anx-search__feedback" id="anxSearchFeedback"></div>
+        </div>
+        <button class="anx-burger" id="anxBurger" aria-label="展开导航" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main>
+  <!-- S2 品牌首屏：左文右侧大图 + 数据条 -->
+  <section class="anx-hero" id="anxHero">
+    <div class="anx-wrap">
+      <div class="anx-hero__grid">
+        <div>
+          <div class="anx-hero__badges">
+            <span class="anx-badge">官方网站</span>
+            <span class="anx-badge anx-badge--rose">原创正版</span>
+            <span class="anx-badge anx-badge--violet">高清内容生态</span>
+          </div>
+          <h1>9781动漫 <span>原创动画视频官网</span></h1>
+          <p class="anx-hero__lead">一个把动画作品、创作者与观众真正连在一起的品牌内容平台。我们持续运营原创企划、分镜手稿与幕后影像，让每一部作品都能被看见、被讨论、被记住。</p>
+          <p class="anx-hero__intro">作为深耕二次元影像领域的动漫企业，9781动漫官网致力于为创作者与企业搭建高品质内容生态：从短片企划、连载剧场到创作者访谈，全部官方发布、高清正版呈现，并以社区化运营陪伴观众长期成长。</p>
+          <div class="anx-hero__actions">
+            <a class="anx-btn anx-btn--primary" href="#anxVideos">进入视频库 ▸</a>
+            <a class="anx-btn anx-btn--ghost" href="#anxTopics">查看专题企划</a>
+            <button class="anx-btn anx-btn--mint" id="anxOpenSubmitHero">投稿 / 报名</button>
+          </div>
+          <div class="anx-hero__stats">
+            <div>
+              <div class="anx-stat__num">1,286<i>部</i></div>
+              <div class="anx-stat__label">官方上线原创作品</div>
+            </div>
+            <div>
+              <div class="anx-stat__num">412<i>位</i></div>
+              <div class="anx-stat__label">签约与入驻创作者</div>
+            </div>
+            <div>
+              <div class="anx-stat__num">9,700<i>万+</i></div>
+              <div class="anx-stat__label">年度累计播放</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="anx-hero__visual">
+          <div class="anx-hero__art">
+            <svg viewBox="0 0 720 520" role="img" aria-label="9781动漫首屏主视觉：深夜城市天台上的动画少女与悬浮胶片">
+              <defs>
+                <linearGradient id="anxHeroSky" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#101a34"/><stop offset=".55" stop-color="#252c58"/><stop offset="1" stop-color="#4a3a6d"/>
+                </linearGradient>
+                <linearGradient id="anxHeroHair" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#8b7cff"/><stop offset="1" stop-color="#ff5d73"/>
+                </linearGradient>
+                <linearGradient id="anxHeroFilm" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#51e0c8"/><stop offset="1" stop-color="#8b7cff"/>
+                </linearGradient>
+              </defs>
+              <rect width="720" height="520" fill="url(#anxHeroSky)"/>
+              <circle cx="560" cy="96" r="52" fill="#ffc857" opacity=".85"/>
+              <circle cx="560" cy="96" r="78" fill="#ffc857" opacity=".12"/>
+              <g fill="#ffffff" opacity=".7">
+                <circle cx="96" cy="70" r="2.2"/><circle cx="168" cy="128" r="1.6"/><circle cx="252" cy="58" r="1.9"/>
+                <circle cx="336" cy="112" r="1.4"/><circle cx="430" cy="48" r="2.1"/><circle cx="640" cy="176" r="1.7"/>
+                <circle cx="70" cy="196" r="1.5"/><circle cx="486" cy="150" r="1.8"/>
+              </g>
+              <g opacity=".5" fill="#51e0c8">
+                <rect x="20" y="300" width="34" height="160" rx="4"/>
+                <rect x="62" y="252" width="46" height="208" rx="4"/>
+                <rect x="116" y="330" width="30" height="130" rx="4"/>
+              </g>
+              <g opacity=".35" fill="#8b7cff">
+                <rect x="580" y="278" width="42" height="182" rx="4"/>
+                <rect x="630" y="320" width="34" height="140" rx="4"/>
+                <rect x="672" y="244" width="40" height="216" rx="4"/>
+              </g>
+              <rect x="0" y="452" width="720" height="68" fill="#0d1424"/>
+              <rect x="0" y="452" width="720" height="4" fill="#51e0c8" opacity=".5"/>
+              <g>
+                <path d="M392 452c0-92 40-152 96-152s96 60 96 152z" fill="#1b2244" opacity=".9"/>
+                <path d="M352 452c0-118 54-196 136-196s136 78 136 196z" fill="url(#anxHeroHair)" opacity=".32"/>
+                <circle cx="488" cy="300" r="54" fill="#f6d9c8"/>
+                <path d="M434 300c0-42 24-70 54-70s54 28 54 70c-14-22-30-32-54-32s-40 10-54 32z" fill="url(#anxHeroHair)"/>
+                <path d="M470 306c8-6 28-6 36 0" stroke="#3a2f4f" stroke-width="4" fill="none" stroke-linecap="round"/>
+                <circle cx="470" cy="294" r="4.6" fill="#232a4a"/><circle cx="506" cy="294" r="4.6" fill="#232a4a"/>
+                <path d="M424 350h128l-14 102H438z" fill="#232c54"/>
+                <path d="M424 350h128l-6 22H430z" fill="#51e0c8" opacity=".7"/>
+              </g>
+              <g transform="translate(120 168) rotate(-9)">
+                <rect x="0" y="0" width="176" height="112" rx="10" fill="url(#anxHeroFilm)" opacity=".9"/>
+                <g fill="#101a34">
+                  <rect x="10" y="10" width="18" height="14" rx="3"/><rect x="148" y="10" width="18" height="14" rx="3"/>
+                  <rect x="10" y="88" width="18" height="14" rx="3"/><rect x="148" y="88" width="18" height="14" rx="3"/>
+                </g>
+                <path d="M64 34l44 22-44 22z" fill="#101a34" opacity=".85"/>
+                <rect x="36" y="76" width="104" height="5" rx="2.5" fill="#101a34" opacity=".5"/>
+              </g>
+              <g transform="translate(430 118)">
+                <rect x="0" y="0" width="118" height="72" rx="9" fill="#ff5d73" opacity=".92"/>
+                <path d="M14 46l16-16 12 10 18-20 14 14" stroke="#1a1024" stroke-width="5" fill="none" stroke-linecap="round"/>
+                <circle cx="92" cy="20" r="7" fill="#ffe6a0"/>
+              </g>
+            </svg>
+          </div>
+          <div class="anx-hero__floating">
+            <strong>本周官方首映</strong>
+            <p>原创短片《雨停之前》4K 修复版上线，导演分镜稿与配乐手记同步公开。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="anx-hero__strip">
+        <span><b>正版</b>全部作品均为官方授权</span>
+        <span><b>高清</b>最高 4K / 60fps</span>
+        <span><b>社区</b>创作者与观众共建</span>
+        <span><b>持续运营</b>每周三、周六更新</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- S3 主内容入口：焦点 2-4 项 + 文字推荐 -->
+  <section class="anx-sec" id="anxFocus">
+    <div class="anx-wrap">
+      <div class="anx-sechead">
+        <div class="anx-sechead__text">
+          <span class="anx-kicker">Focus / 精品内容</span>
+          <h2 class="anx-h2">9781动漫本周<em>焦点作品</em>与重点片单</h2>
+          <p class="anx-secdesc">编辑部从官网视频库中挑选出兼具叙事完成度与画面质感的原创作品，覆盖连载剧场、独立短片与幕后纪录三类内容形态。</p>
+        </div>
+        <a class="anx-more" href="#anxVideos">浏览全部视频</a>
+      </div>
+
+      <div class="anx-focus">
+        <article class="anx-focus__main">
+          <div class="anx-focus__cover">
+            <svg viewBox="0 0 640 360" role="img" aria-label="焦点作品《碎片档案馆》第二季封面：蓝紫色档案柜与漂浮的记忆碎片">
+              <defs>
+                <linearGradient id="anxF1" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#1d2450"/><stop offset="1" stop-color="#513a7a"/>
+                </linearGradient>
+              </defs>
+              <rect width="640" height="360" fill="url(#anxF1)"/>
+              <g opacity=".9">
+                <rect x="70" y="70" width="120" height="220" rx="8" fill="#2a2f5c" stroke="#51e0c8" stroke-opacity=".4"/>
+                <rect x="210" y="110" width="120" height="180" rx="8" fill="#343a6d" stroke="#8b7cff" stroke-opacity=".5"/>
+                <rect x="350" y="52" width="120" height="238" rx="8" fill="#2a2f5c" stroke="#ff5d73" stroke-opacity=".4"/>
+                <rect x="490" y="130" width="110" height="160" rx="8" fill="#343a6d" stroke="#ffc857" stroke-opacity=".4"/>
+              </g>
+              <g fill="#f7f8ff" opacity=".82">
+                <rect x="92" y="96" width="76" height="10" rx="5"/>
+                <rect x="92" y="118" width="54" height="10" rx="5"/>
+                <rect x="232" y="136" width="76" height="10" rx="5"/>
+                <rect x="372" y="78" width="76" height="10" rx="5"/>
+                <rect x="512" y="156" width="66" height="10" rx="5"/>
+              </g>
+              <g fill="#51e0c8">
+                <circle cx="150" cy="196" r="6"/><circle cx="290" cy="200" r="6"/><circle cx="430" cy="170" r="6"/><circle cx="556" cy="212" r="6"/>
+              </g>
+              <g stroke="#ff5d73" stroke-width="3" fill="none" opacity=".85">
+                <path d="M150 196l140 4 140-30 126 42"/>
+              </g>
+              <g transform="translate(392 246) rotate(-6)">
+                <rect width="150" height="60" rx="7" fill="#101a34" opacity=".85" stroke="#ffc857"/>
+                <path d="M18 30h30l16-14 16 28 14-14h34" stroke="#51e0c8" stroke-width="4" fill="none" stroke-linecap="round"/>
+              </g>
+            </svg>
+            <button class="anx-play" id="anxPlayFocus" aria-label="播放焦点作品">▶</button>
+          </div>
+          <div class="anx-focus__body">
+            <div class="anx-tags">
+              <span class="anx-tag anx-tag--rose">连载剧场</span>
+              <span class="anx-tag anx-tag--mint">官方首发</span>
+              <span class="anx-tag">悬疑 / 记忆题材</span>
+            </div>
+            <h3 class="anx-h3">《碎片档案馆》第二季 · 第4集「雨声里的第七张照片」</h3>
+            <p>一条被剪掉的记忆线索引出新的档案编号。本集以冷色调夜景与错位剪辑为骨架，把侦探推理与情绪留白放在同一节奏里，是9781动漫今年最受关注的自制连载企划之一。</p>
+            <div class="anx-meta">
+              <span>作者 <b>@纸鸢工作室</b></span>
+              <span>播放 <b>186.4万</b></span>
+              <span>点赞 <b>9.2万</b></span>
+              <span>收藏 <b>4.1万</b></span>
+              <span>时长 <b>22:40</b></span>
+            </div>
+            <div class="anx-acts">
+              <button class="anx-act" data-like data-count="192410">♡ 点赞 <span>9.2万</span></button>
+              <button class="anx-act" data-save>☆ 收藏</button>
+              <button class="anx-act" data-comment="#anxVoices">💬 评论</button>
+              <button class="anx-act" data-share>⤴ 分享</button>
+            </div>
+          </div>
+        </article>
+
+        <div class="anx-focus__side">
+          <article class="anx-mini">
+            <div class="anx-mini__thumb">
+              <svg viewBox="0 0 200 150" role="img" aria-label="独立短片《雨停之前》缩略图：雨中蓝伞与城市街灯">
+                <rect width="200" height="150" fill="#233257"/>
+                <g stroke="#7fa6d8" stroke-width="2" opacity=".7">
+                  <path d="M20 10v26M56 4v22M92 14v20M128 6v24M164 12v22"/>
+                </g>
+                <path d="M56 96a38 30 0 0176 0z" fill="#51e0c8"/>
+                <rect x="92" y="96" width="4" height="40" fill="#d7e6ff"/>
+                <circle cx="150" cy="52" r="14" fill="#ffc857" opacity=".8"/>
+                <rect x="0" y="132" width="200" height="18" fill="#141c31"/>
+              </svg>
+            </div>
+            <div>
+              <h4>《雨停之前》4K 修复版</h4>
+              <p>一位修伞匠与常来避雨的女孩，在连续三十天的雨季里交换彼此的秘密。</p>
+              <div class="anx-mini__meta">@拾光小组 · 单集短片 · 14:05</div>
+            </div>
+          </article>
+          <article class="anx-mini">
+            <div class="anx-mini__thumb">
+              <svg viewBox="0 0 200 150" role="img" aria-label="幕后纪录《一笔一帧》缩略图：手绘分镜稿与绘图桌">
+                <rect width="200" height="150" fill="#f2e6d2"/>
+                <rect x="24" y="24" width="104" height="86" rx="4" fill="#fff" stroke="#caa97f"/>
+                <g stroke="#c9b79b" stroke-width="3">
+                  <path d="M38 44h74M38 60h60M38 76h70M38 92h44"/>
+                </g>
+                <circle cx="152" cy="42" r="16" fill="#ff5d73" opacity=".85"/>
+                <path d="M132 118l40-30" stroke="#8b7cff" stroke-width="7" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <h4>《一笔一帧》：12 个人画一个转身</h4>
+              <p>追踪原画组为一个 3 秒镜头反复打磨的六周，附完整作画会议录音节选。</p>
+              <div class="anx-mini__meta">@9781动漫纪录片组 · 幕后 · 26:18</div>
+            </div>
+          </article>
+          <article class="anx-mini">
+            <div class="anx-mini__thumb">
+              <svg viewBox="0 0 200 150" role="img" aria-label="城市探索短片《深夜便利店》缩略图：便利店灯光与夜行人">
+                <rect width="200" height="150" fill="#151d33"/>
+                <rect x="36" y="38" width="128" height="76" rx="6" fill="#ffc857" opacity=".9"/>
+                <rect x="52" y="54" width="40" height="26" rx="3" fill="#1b2340"/>
+                <rect x="102" y="54" width="46" height="26" rx="3" fill="#1b2340"/>
+                <rect x="36" y="114" width="128" height="8" fill="#2a3559"/>
+                <circle cx="168" cy="30" r="12" fill="#51e0c8" opacity=".7"/>
+              </svg>
+            </div>
+            <div>
+              <h4>深夜便利店：城市里的三次相遇</h4>
+              <p>用三个夜晚、六位陌生人的对话，拼出一座城市不写在攻略里的样子。</p>
+              <div class="anx-mini__meta">@南岸影像 · 城市探索 · 18:52</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- M3 热门视频流：三列等高卡片 -->
+  <section class="anx-sec anx-sec--alt" id="anxVideos">
+    <div class="anx-wrap">
+      <div class="anx-sechead">
+        <div class="anx-sechead__text">
+          <span class="anx-kicker">Videos / 视频库</span>
+          <h2 class="anx-h2">官网热门视频：<em>原创正版</em>内容持续更新</h2>
+          <p class="anx-secdesc">作品涵盖连载剧场、独立短片、幕后纪录与实用教程。所有条目均为9781动漫官方发布，支持高清在线播放与收藏。</p>
+        </div>
+        <a class="anx-more" href="#anxTopics">按专题查看</a>
+      </div>
+
+      <div class="anx-videogrid">
+        <article class="anx-vcard">
+          <div class="anx-vcard__cover">
+            <svg viewBox="0 0 480 270" role="img" aria-label="连载作品《星轨邮差》封面：紫色夜空中的邮差与飞行邮袋">
+              <rect width="480" height="270" fill="#221a4a"/>
+              <circle cx="110" cy="70" r="42" fill="#8b7cff" opacity=".5"/>
+              <circle cx="360" cy="60" r="58" fill="#ff5d73" opacity=".28"/>
+              <g fill="#ffffff" opacity=".8">
+                <circle cx="60" cy="180" r="2"/><circle cx="150" cy="120" r="1.6"/><circle cx="250" cy="200" r="2.2"/>
+                <circle cx="330" cy="150" r="1.7"/><circle cx="420" cy="110" r="2"/>
+              </g>
+              <path d="M120 230c40-80 120-80 150-140" stroke="#51e0c8" stroke-width="3" fill="none" stroke-dasharray="8 8"/>
+              <g transform="translate(228 118)">
+                <rect x="0" y="0" width="66" height="48" rx="6" fill="#f4f1ff"/>
+                <path d="M0 8l33 24 33-24" stroke="#8b7cff" stroke-width="4" fill="none"/>
+              </g>
+              <path d="M0 240h480v30H0z" fill="#120e2b"/>
+            </svg>
+            <span class="anx-vcard__dur">24:36</span>
+          </div>
+          <div class="anx-vcard__body">
+            <div class="anx-tags">
+              <span class="anx-tag anx-tag--violet">连载剧场</span>
+              <span class="anx-tag">奇幻</span>
+            </div>
+            <h3>《星轨邮差》第7集：一封寄往十年前的信</h3>
+            <p>邮差要把信送到已经不存在的时间坐标，编剧大胆地让整集只有三次对话，其余全靠画面叙事。</p>
+            <div class="anx-vcard__foot">
+              <span class="anx-vcard__author"><span class="anx-avatar" style="background:#8b7cff">星</span>@星轨制作组</span>
+              <span>播放 132.7万</span><span>点赞 6.8万</span>
+            </div>
+            <div class="anx-acts">
+              <button class="anx-act" data-like data-count="68420">♡ 点赞 <span>6.8万</span></button>
+              <button class="anx-act" data-save>☆ 收藏</button>
+              <button class="anx-act" data-share>⤴ 分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="anx-vcard">
+          <div class="anx-vcard__cover">
+            <svg viewBox="0 0 480 270" role="img" aria-label="教程视频《三分钟学会动态分镜》封面：分镜格与时间轴">
+              <rect width="480" height="270" fill="#f6f1e4"/>
+              <g stroke="#d8c8a8" stroke-width="2" fill="#fff">
+                <rect x="34" y="34" width="120" height="80" rx="5"/>
+                <rect x="170" y="34" width="120" height="80" rx="5"/>
+                <rect x="306" y="34" width="120" height="80" rx="5"/>
+              </g>
+              <g fill="#c8bca2">
+                <circle cx="94" cy="74" r="20"/><rect x="200" y="60" width="60" height="30" rx="4"/><path d="M340 80l30-24 30 24z"/>
+              </g>
+              <rect x="34" y="146" width="392" height="14" rx="7" fill="#e2d7c0"/>
+              <rect x="34" y="146" width="164" height="14" rx="7" fill="#ff5d73"/>
+              <g fill="#1b2340">
+                <rect x="34" y="184" width="184" height="10" rx="5" opacity=".7"/>
+                <rect x="34" y="204" width="248" height="10" rx="5" opacity=".4"/>
+                <rect x="34" y="224" width="140" height="10" rx="5" opacity=".55"/>
+              </g>
+              <circle cx="404" cy="200" r="34" fill="#51e0c8" opacity=".9"/>
+              <path d="M394 184l24 16-24 16z" fill="#0f2b26"/>
+            </svg>
+            <span class="anx-vcard__dur">09:12</span>
+          </div>
+          <div class="anx-vcard__body">
+            <div class="anx-tags">
+              <span class="anx-tag anx-tag--mint">教程干货</span>
+              <span class="anx-tag">分镜</span>
+            </div>
+            <h3>三分钟学会动态分镜：从格子到时间轴</h3>
+            <p>用一条完整的商业短片需求做示范，拆解节奏表、镜头时长与转场逻辑的对应关系，新手可直接套用。</p>
+            <div class="anx-vcard__foot">
+              <span class="anx-vcard__author"><span class="anx-avatar" style="background:#51e0c8;color:#0f2b26">砚</span>@阿砚的分镜课</span>
+              <span>播放 98.3万</span><span>点赞 5.4万</span>
+            </div>
+            <div class="anx-acts">
+              <button class="anx-act" data-like data-count="54210">♡ 点赞 <span>5.4万</span></button>
+              <button class="anx-act" data-save>☆ 收藏</button>
+              <button class="anx-act" data-share>⤴ 分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="anx-vcard">
+          <div class="anx-vcard__cover">
+            <svg viewBox="0 0 480 270" role="img" aria-label="人物访谈《十年作画》封面：两位对坐的动画人与录音话筒">
+              <rect width="480" height="270" fill="#1d3b3a"/>
+              <rect x="60" y="150" width="120" height="120" rx="10" fill="#2b5450"/>
+              <rect x="300" y="150" width="120" height="120" rx="10" fill="#2b5450"/>
+              <circle cx="120" cy="126" r="26" fill="#f0d3bf"/>
+              <circle cx="360" cy="126" r="26" fill="#e8c3a8"/>
+              <rect x="98" y="106" width="44" height="16" rx="8" fill="#3d2b28"/>
+              <rect x="338" y="106" width="44" height="16" rx="8" fill="#4a3630"/>
+              <path d="M236 108v70" stroke="#ffc857" stroke-width="6" stroke-linecap="round"/>
+              <rect x="216" y="72" width="40" height="40" rx="20" fill="#ffc857" opacity=".9"/>
+              <g stroke="#51e0c8" stroke-width="2" opacity=".6">
+                <path d="M200 190h80M200 206h60M200 222h70"/>
+              </g>
+            </svg>
+            <span class="anx-vcard__dur">31:04</span>
+          </div>
+          <div class="anx-vcard__body">
+            <div class="anx-tags">
+              <span class="anx-tag anx-tag--rose">人物访谈</span>
+              <span class="anx-tag">行业观察</span>
+            </div>
+            <h3>十年作画：从外包车间到原创制片人</h3>
+            <p>两位入行十年的动画人聊行业变迁：当效率工具越来越多，手绘的判断力为什么反而更贵了。</p>
+            <div class="anx-vcard__foot">
+              <span class="anx-vcard__author"><span class="anx-avatar" style="background:#ff5d73">访</span>@9781动漫会客厅</span>
+              <span>播放 76.5万</span><span>点赞 4.9万</span>
+            </div>
+            <div class="anx-acts">
+              <button class="anx-act" data-like data-count="49350">♡ 点赞 <span>4.9万</span></button>
+              <button class="anx-act" data-save>☆ 收藏</button>
+              <button class="anx-act" data-share>⤴ 分享</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="anx-list" style="margin-top:22px">
+        <article class="anx-listrow">
+          <div class="anx-listrow__no">01</div>
+          <div class="anx-listrow__text">
+            <h4>《城市动物图鉴》第3话：凌晨四点开门的早餐铺</h4>
+            <p>城市探索 · @南岸影像 · 用镜头记录一家开了二十七年的小店与它的常客们。</p>
+          </div>
+          <div class="anx-listrow__data"><span>播放 64.2万</span><span>收藏 2.1万</span><span>18:07</span></div>
+        </article>
+        <article class="anx-listrow">
+          <div class="anx-listrow__no">02</div>
+          <div class="anx-listrow__text">
+            <h4>一部短片的配乐是怎么被写出来的</h4>
+            <p>创作幕后 · @拾光小组 · 从钢琴草稿到完整编制，录音棚里的十二小时实录。</p>
+          </div>
+          <div class="anx-listrow__data"><span>播放 51.8万</span><span>收藏 1.9万</span><span>21:33</span></div>
+        </article>
+        <article class="anx-listrow">
+          <div class="anx-listrow__no">03</div>
+          <div class="anx-listrow__text">
+            <h4>手作 DIY：用黏土复刻一个动画角色</h4>
+            <p>手作教学 · @黏土研究所 · 从骨架搭建到上色定型，附完整材料清单与失败案例。</p>
+          </div>
+          <div class="anx-listrow__data"><span>播放 47.6万</span><span>收藏 3.4万</span><span>15:46</span></div>
+        </article>
+        <article class="anx-listrow">
+          <div class="anx-listrow__no">04</div>
+          <div class="anx-listrow__text">
+            <h4>深夜电台：关于「陪伴」的十分钟独白</h4>
+            <p>情感故事 · @九十帧 · 声音与插画同步展开的一集治愈影像，建议戴耳机观看。</p>
+          </div>
+          <div class="anx-listrow__data"><span>播放 39.1万</span><span>收藏 2.6万</span><span>10:12</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S4 专题企划 -->
+  <section class="anx-sec" id="anxTopics">
+    <div class="anx-wrap">
+      <div class="anx-sechead">
+        <div class="anx-sechead__text">
+          <span class="anx-kicker">Programs / 专题企划</span>
+          <h2 class="anx-h2">9781动漫<em>专题企划</em>与长期内容计划</h2>
+          <p class="anx-secdesc">专题是官网内容生态的骨架：我们把分散的作品按主题重新编排，形成可以追更、可以投稿、可以投票的持续企划。</p>
+        </div>
+      </div>
+
+      <div class="anx-topics">
+        <article class="anx-topic anx-topic--dark">
+          <span class="anx-topic__state">更新中 · 每周六</span>
+          <h3 class="anx-h3">「一镜到底」原创短片挑战</h3>
+          <p>面向全站创作者的年度重点企划：限定单一长镜头完成叙事，评审从调度、表演与声音设计三个维度打分，优秀作品将获得官网首页推荐与制作基金支持。</p>
+          <div class="anx-topic__cover">
+            <svg viewBox="0 0 640 240" role="img" aria-label="一镜到底短片挑战专题横幅：连续镜头轨迹与场记板">
+              <defs>
+                <linearGradient id="anxT1" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#8b7cff"/><stop offset=".5" stop-color="#51e0c8"/><stop offset="1" stop-color="#ffc857"/>
+                </linearGradient>
+              </defs>
+              <rect width="640" height="240" fill="#141b2e"/>
+              <path d="M20 190c90-120 180 60 270-40s180-70 330-20" stroke="url(#anxT1)" stroke-width="5" fill="none"/>
+              <g fill="#ff5d73">
+                <circle cx="20" cy="190" r="8"/><circle cx="290" cy="150" r="8"/><circle cx="620" cy="130" r="8"/>
+              </g>
+              <g transform="translate(70 40)">
+                <rect width="150" height="92" rx="8" fill="#222a48" stroke="#51e0c8"/>
+                <g fill="#51e0c8"><rect x="12" y="10" width="40" height="12" rx="4"/><rect x="60" y="10" width="40" height="12" rx="4"/><rect x="108" y="10" width="30" height="12" rx="4"/></g>
+                <rect x="12" y="34" width="126" height="8" rx="4" fill="#44507f"/>
+                <rect x="12" y="52" width="90" height="8" rx="4" fill="#44507f"/>
+                <rect x="12" y="70" width="110" height="8" rx="4" fill="#44507f"/>
+              </g>
+            </svg>
+          </div>
+          <ul class="anx-topic__list">
+            <li><b>评委手记</b>三位评审拆解「长镜头里最容易露怯的五个瞬间」</li>
+            <li><b>报名入口</b>投稿截止 12 月 20 日，支持高清文件上传与在线预览</li>
+            <li><b>投票通道</b>人气票每日 3 票，结果与专业评审各占 50%</li>
+          </ul>
+        </article>
+
+        <article class="anx-topic">
+          <span class="anx-topic__state">连载中 · 双周更</span>
+          <h3 class="anx-h3">在地记忆：城市影像计划</h3>
+          <p>走进不同城市的老街、旧厂房与菜市场，用动画与实拍对照的方式，记录正在消失的日常场景。</p>
+          <ul class="anx-topic__list">
+            <li><b>第 4 站</b>沿江旧仓库：把二十年前的码头画回来</li>
+            <li><b>第 5 站</b>夜班公交：末班车上的十二种睡姿</li>
+            <li><b>第 6 站</b>老菜场：从叫卖声里采样配乐</li>
+          </ul>
+        </article>
+
+        <article class="anx-topic">
+          <span class="anx-topic__state">已完结 · 可回看</span>
+          <h3 class="anx-h3">创作幕后：一笔一帧</h3>
+          <p>六集纪录短片，跟随原画、上色、摄影与剪辑四个职能，看清一部动画短片从无到有的完整链路。</p>
+          <ul class="anx-topic__list">
+            <li><b>EP01</b>从一句话到一页企划书</li>
+            <li><b>EP03</b>上色部的颜色表与偏差容忍度</li>
+            <li><b>EP06</b>混音棚里的最后一夜</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- M15 关键词解析：不少于 800 字，分 3-4 个 H3 -->
+  <section class="anx-sec anx-sec--alt" id="anxInsight">
+    <div class="anx-wrap">
+      <div class="anx-sechead">
+        <div class="anx-sechead__text">
+          <span class="anx-kicker">Insight / 深度解析</span>
+          <h2 class="anx-h2">关键词解析：<em>9781动漫</em>在做什么样的内容</h2>
+          <p class="anx-secdesc">这不是一段品牌口号，而是一份对内容方法、平台机制与社区关系的完整说明，帮助你判断这里是否值得长期停留。</p>
+        </div>
+      </div>
+
+      <div class="anx-essay">
+        <h3>一、从名字开始：一个动漫内容品牌的基本盘</h3>
+        <p>在搜索引擎与内容平台高度同质化的今天，「9781动漫」这个关键词背后首先是一家持续运营的动漫内容企业，而不是一个临时搭建的播放页面。官网把作品、创作者、专题与社区互动放在同一套系统里：观众打开首页，看到的不只是一串视频封面，而是品牌在做什么、本周更新了什么、谁在创作、观众在讨论什么。这种结构决定了内容的组织方式——作品必须被解释，创作者必须被介绍，社区必须被回应。对于动漫这个高度依赖情感连接的品类来说，只有把「看」变成「追」，把「追」变成「参与」，内容生态才真正成立。</p>
+        <p>因此，9781动漫官网在首页就把官方属性写清楚：官方网站、原创正版、高清呈现、持续运营。这些词不是装饰，而是对用户的三重承诺。第一重是来源清晰，所有作品都可追溯到具体的创作团队与发布记录；第二重是画质与完整性，修复版、4K 版本、幕后花絮与正片形成一套可验证的内容资产；第三重是时间承诺，每周固定更新节奏让观众形成预期。对企业而言，这套承诺意味着更长的内容生命周期；对创作者而言，它意味着作品不会在信息流里被任意稀释；对观众而言，它意味着打开页面就知道该期待什么。</p>
+
+        <h3>二、内容结构：连载剧场、独立短片、幕后纪录与实用教程的四层搭配</h3>
+        <p>9781动漫的内容库里，最受关注的是连载剧场。以《碎片档案馆》与《星轨邮差》为代表，这类作品有稳定的世界观、固定的更新周期和清晰的编剧方法：单集完成一个情绪闭环，同时为下一集留下钩子。连载承担的是留存与讨论的任务，观众会在评论区逐帧分析伏笔，也会为某个镜头的构图写长评，这种讨论反过来成为创作组的参考材料。第二层是独立短片，篇幅更短、风格更自由，承担的是创意试验与新人露出的任务，很多新锐作者正是通过一部十几分钟的单片获得关注。</p>
+        <p>第三层是幕后纪录，像《一笔一帧》这样的作品把制作流程公开：原画会议、上色色表、摄影合成、混音棚的最后一夜都被记录下来。这类内容对行业从业者是方法论，对普通观众是理解门槛的降低——当观众知道一个转身需要十二个人画六周，他们对成片的耐心与尊重会显著提高。第四层是实用教程，例如动态分镜、黏土手作、配乐写作，它们让动漫内容从「被观看」延伸到「被实践」，也让社区从单纯的观众群变成创作者预备队。四层结构互相支撑：连载带来流量，短片带来新血，幕后带来信任，教程带来参与。</p>
+
+        <h3>三、社区机制：创作者、观众与官方发布之间的三方循环</h3>
+        <p>一个动漫品牌官网如果不能承载社区，就很难说自己在持续运营。9781动漫把社区机制拆成三个可执行的环节。第一个环节是创作者档案：每位入驻作者都有明确的擅长领域、作品数量、粉丝数与一段八十到一百二十字的简介，观众点开就能判断「这个人值不值得追」。档案不是装饰页面，它直接连接到作品列表与最新动态，也支持站内私信与投稿邀约。第二个环节是官方发布节奏：公告条、企业动态与专题更新状态共同构成时间感，让用户知道平台不是静止的仓库，而是每天都在发生事情的空间。</p>
+        <p>第三个环节是观众反馈回路。点赞、收藏、评论与分享这些看似基础的交互，在这里被赋予了具体用途：数据进入热度榜与口碑榜，成为专题推荐与新人扶持的依据；评论区的长评会被编辑整理，作为下一期专题的选题来源；观众在投票通道里的选择，会直接影响「一镜到底」挑战赛的最终结果。这种设计让「用户至上」不至于停在口号层面——观众的每一次点击都在改变首页长什么样。与此同时，平台也保留编辑推荐的位置，避免内容完全被流量逻辑绑架，保证品质与方向的稳定。</p>
+
+        <h3>四、品牌价值：为什么值得长期停留</h3>
+        <p>对观众而言，9781动漫提供的是稳定的内容预期与可参与的社区氛围；对创作者而言，它提供的是作品被完整呈现的空间、可被检索的档案与合理的分成与扶持机制；对企业客户而言，它提供的是垂类影响力与真实的内容口碑——不是一次投放，而是与一个有创作能力的团队共建企划。这三类需求能在同一个官网结构里被满足，靠的是长期主义的运营选择：不追逐单条爆款，而是把每一部作品、每一位作者、每一次更新都记录在案。正因如此，「原创」「正版」「高清」「专业」这些词在这里不是营销标签，而是可以逐条验证的事实。</p>
+        <p>动漫内容的魅力在于它能把抽象的情绪变成可被看见的画面。9781动漫希望做的，是把这种能力组织起来：让创作者不必独自承担所有环节，让观众不必在碎片信息里反复寻找，让品牌与社区在同一套价值标准下共同成长。当你在这个官网里从一部短片追到一篇幕后手记，再从一个创作者档案追到一场专题企划，你其实已经参与到这个内容生态的运转之中。这也是我们理解的「值得信赖」：不是承诺完美，而是持续交付、持续回应、持续在场。</p>
+        <div class="anx-essay__note">
+          小提示：官网每周三、周六更新作品，专题企划按双周节奏推进；想参与创作，可从「投稿 / 报名」入口提交企划书与样片，编辑部会在七个工作日内回复。
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S5 创作者矩阵：双列简介 -->
+  <section class="anx-sec" id="anxAuthors">
+    <div class="anx-wrap">
+      <div class="anx-sechead">
+        <div class="anx-sechead__text">
+          <span class="anx-kicker">Creators / 创作者</span>
+          <h2 class="anx-h2">9781动漫<em>创作者矩阵</em>：谁在持续产出</h2>
+          <p class="anx-secdesc">他们是平台内容生态的核心。每一位创作者都经过入驻审核，作品在官网首发并可追溯创作记录。</p>
+        </div>
+        <a class="anx-more" href="#anxFaq">了解入驻规则</a>
+      </div>
+
+      <div class="anx-authors">
+        <article class="anx-author">
+          <div class="anx-author__ava" style="background:linear-gradient(140deg,#8b7cff,#ff5d73)">鸢</div>
+          <div>
+            <h3>纸鸢工作室</h3>
+            <div class="anx-author__field">悬疑叙事 / 连载剧场</div>
+            <p>由三位编剧与两位导演组成的小型团队，擅长用克制的对白和高密度的画面信息推进悬疑线。《碎片档案馆》是其代表作，团队坚持每集手绘分镜不少于两百格，并在官网公开部分原稿供同行讨论。</p>
+            <div class="anx-author__nums"><span>作品 <b>34</b></span><span>粉丝 <b>62.8万</b></span><span>更新 <b>每周六</b></span></div>
+            <div class="anx-author__btns">
+              <button class="anx-act" data-author="纸鸢工作室|悬疑叙事与连载剧场团队，《碎片档案馆》主创，作品34部，粉丝62.8万。">查看档案</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="anx-author">
+          <div class="anx-author__ava" style="background:linear-gradient(140deg,#51e0c8,#1f8f7c)">砚</div>
+          <div>
+            <h3>阿砚的分镜课</h3>
+            <div class="anx-author__field">教程干货 / 分镜与节奏</div>
+            <p>动画专业教师出身，把课堂里的分镜方法拆成可以直接上手的步骤。他的教程很少堆术语，而是用真实商业需求做示范，从节奏表到镜头时长逐项对齐，被不少新人称为「入行第一课」。</p>
+            <div class="anx-author__nums"><span>作品 <b>86</b></span><span>粉丝 <b>45.2万</b></span><span>更新 <b>每周三</b></span></div>
+            <div class="anx-author__btns">
+              <button class="anx-act" data-author="阿砚的分镜课|动画专业教师，专注分镜与节奏教学，作品86部，粉丝45.2万。">查看档案</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="anx-author">
+          <div class="anx-author__ava" style="background:linear-gradient(140deg,#ffc857,#ff8a5c);color:#241a06">拾</div>
+          <div>
+            <h3>拾光小组</h3>
+            <div class="anx-author__field">独立短片 / 情感故事</div>
+            <p>一个偏爱雨天与旧物件的创作小组，作品多为十几分钟的单集短片。他们习惯先写配乐再写画面，因此成片常有很强的呼吸感；《雨停之前》的修复版上线后，评论区留下了大量关于故乡与告别的长文。</p>
+            <div class="anx-author__nums"><span>作品 <b>21</b></span><span>粉丝 <b>38.6万</b></span><span>更新 <b>不定期</b></span></div>
+            <div class="anx-author__btns">
+              <button class="anx-act" data-author="拾光小组|专注情感向独立短片，先配乐后画面的创作方法，作品21部，粉丝38.6万。">查看档案</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="anx-author">
+          <div class="anx-author__ava" style="background:linear-gradient(140deg,#2a3559,#5b6bb0)">南</div>
+          <div>
+            <h3>南岸影像</h3>
+            <div class="anx-author__field">城市探索 / 在地文化</div>
+            <p>长期拍摄城市夜晚与普通人的日常，镜头语言朴素但观察极细。他会在每条视频下附上拍摄地点的开放信息与交通建议，不少观众照着视频走完了自己城市的另一面。</p>
+            <div class="anx-author__nums"><span>作品 <b>57</b></span><span>粉丝 <b>29.4万</b></span><span>更新 <b>每两周</b></span></div>
+            <div class="anx-author__btns">
+              <button class="anx-act" data-author="南岸影像|城市探索与在地文化纪录者，作品57部，粉丝29.4万，每条附拍摄地开放信息。">查看档案</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="anx-author">
+          <div class="anx-author__ava" style="background:linear-gradient(140deg,#ff5d73,#a02f46)">星</div>
+          <div>
+            <h3>星轨制作组</h3>
+            <div class="anx-author__field">奇幻世界观 / 系列企划</div>
+            <p>擅长搭建完整世界观的系列企划团队，设定集厚度常常超过剧本本身。《星轨邮差》里那套时间坐标系统由团队自行设计，并在官网开放了可交互的世界观图谱，供观众考据与补完。</p>
+            <div class="anx-author__nums"><span>作品 <b>43</b></span><span>粉丝 <b>51.7万</b></span><span>更新 <b>每周六</b></span></div>
+            <div class="anx-author__btns">
+              <button class="anx-act" data-author="星轨制作组|奇幻世界观系列企划团队，《星轨邮差》主创，作品43部，粉丝51.7万。">查看档案</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- M14 榜单 + M8 评价（双列短评） -->
+  <section class="anx-sec anx-sec--alt" id="anxVoices">
+    <div class="anx-wrap">
+      <div class="anx-sechead">
+        <div class="anx-sechead__text">
+          <span class="anx-kicker">Ranking / 榜单与口碑</span>
+          <h2 class="anx-h2">数据榜单与<em>真实用户评价</em></h2>
+          <p class="anx-secdesc">榜单按周更新，统计口径为官网播放、收藏与完播率的综合加权；评价来自站内观众与入驻创作者，未经编辑改写。</p>
+        </div>
+      </div>
+
+      <div class="anx-rank">
+        <div class="anx-rankcol">
+          <h3><i></i>热度榜 · 本周</h3>
+          <ol class="anx-ranklist">
+            <li><span>1</span><span>《碎片档案馆》第二季 第4集</span><span>186.4万</span></li>
+            <li><span>2</span><span>《星轨邮差》第7集</span><span>132.7万</span></li>
+            <li><span>3</span><span>三分钟学会动态分镜</span><span>98.3万</span></li>
+            <li><span>4</span><span>十年作画：从外包到制片</span><span>76.5万</span></li>
+            <li><span>5</span><span>《雨停之前》4K 修复版</span><span>71.9万</span></li>
+          </ol>
+        </div>
+        <div class="anx-rankcol">
+          <h3><i></i>新人榜 · 本月</h3>
+          <ol class="anx-ranklist">
+            <li><span>1</span><span>黏土研究所</span><span>新增粉 4.8万</span></li>
+            <li><span>2</span><span>九十帧</span><span>新增粉 3.6万</span></li>
+            <li><span>3</span><span>北纬四十度</span><span>新增粉 2.9万</span></li>
+            <li><span>4</span><span>小叶的声优笔记</span><span>新增粉 2.4万</span></li>
+            <li><span>5</span><span>纸片建筑事务所</span><span>新增粉 2.1万</span></li>
+          </ol>
+        </div>
+        <div class="anx-rankcol">
+          <h3><i></i>口碑榜 · 综合</h3>
+          <ol class="anx-ranklist">
+            <li><span>1</span><span>创作幕后：一笔一帧</span><span>9.6 分</span></li>
+            <li><span>2</span><span>《雨停之前》4K 修复版</span><span>9.4 分</span></li>
+            <li><span>3</span><span>在地记忆：城市影像计划</span><span>9.3 分</span></li>
+            <li><span>4</span><span>《碎片档案馆》第二季</span><span>9.1 分</span></li>
+            <li><span>5</span><span>阿砚的分镜课</span><span>9.0 分</span></li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="anx-comments" style="margin-top:26px">
+        <article class="anx-cmt anx-cmt--quote">
+          <div class="anx-cmt__head">
+            <span class="anx-avatar" style="background:#8b7cff">周</span>
+            <span class="anx-cmt__name">周末不加班</span>
+            <span class="anx-cmt__dim">追更观众 · 观看 2 年</span>
+          </div>
+          <p>「最打动我的是幕后纪录里那场凌晨的原画会议。以前只会在意成片好不好看，看完才明白一秒钟需要多少人一起把细节磨平。这种内容愿意公开，本身就说明品牌有底气。」</p>
+          <div class="anx-cmt__stars">★★★★★</div>
+        </article>
+        <article class="anx-cmt">
+          <div class="anx-cmt__head">
+            <span class="anx-avatar" style="background:#51e0c8;color:#0f2b26">林</span>
+            <span class="anx-cmt__name">林间有雾</span>
+            <span class="anx-cmt__dim">评价维度：画质</span>
+          </div>
+          <p>修复版上线后重新看了一遍《雨停之前》，雨丝和伞面的质感完全是两部片子，官网的高清播放确实没打折。</p>
+        </article>
+        <article class="anx-cmt">
+          <div class="anx-cmt__head">
+            <span class="anx-avatar" style="background:#ff5d73">小</span>
+            <span class="anx-cmt__name">小叶的声优笔记</span>
+            <span class="anx-cmt__dim">入驻创作者 · 评价维度：社区</span>
+          </div>
+          <p>作为入驻作者说句实在话：编辑会给具体建议，不是只发一句「已收到」。我的第 4 条视频就是按反馈重剪的，完播率翻了一倍。</p>
+        </article>
+        <article class="anx-cmt">
+          <div class="anx-cmt__head">
+            <span class="anx-avatar" style="background:#ffc857;color:#241a06">陈</span>
+            <span class="anx-cmt__name">陈老师的动画课</span>
+            <span class="anx-cmt__dim">评价维度：教程实用度</span>
+          </div>
+          <p>把阿砚的分镜课布置给学生当作业参考，节奏表那一段讲得比教材清楚，步骤可以直接落地。</p>
+        </article>
+        <article class="anx-cmt">
+          <div class="anx-cmt__head">
+            <span class="anx-avatar" style="background:#5b6bb0">北</span>
+            <span class="anx-cmt__name">北纬四十度</span>
+            <span class="anx-cmt__dim">评价维度：专题企划</span>
+          </div>
+          <p>在地记忆这个企划很有意思，跟着视频去了一趟老菜场，真实的声音比任何宣传都更有说服力。</p>
+        </article>
+        <article class="anx-cmt anx-cmt--quote">
+          <div class="anx-cmt__head">
+            <span class="anx-avatar" style="background:#51e0c8;color:#0f2b26">苏</span>
+            <span class="anx-cmt__name">苏打汽水</span>
+            <span class="anx-cmt__dim">社区活跃用户 · 投稿 3 次</span>
+          </div>
+          <p>「投稿流程比想象中简单，投稿入口里能直接上传样片和企划书，七个工作日内真的收到了回复，虽然第一次没过，但意见写得很认真，第二次就上了首页推荐。」</p>
+          <div class="anx-cmt__stars">★★★★☆</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- M9 / M10 / M11 辅助区 -->
+  <section class="anx-sec" id="anxAux">
+    <div class="anx-wrap">
+      <div class="anx-sechead">
+        <div class="anx-sechead__text">
+          <span class="anx-kicker">More / 更多</span>
+          <h2 class="anx-h2">创作灵感、<em>企业动态</em>与合作伙伴</h2>
+          <p class="anx-secdesc">除了作品本身，官网也把方法论、品牌进展与协作网络公开出来，让内容生态的运转过程可以被看见。</p>
+        </div>
+      </div>
+
+      <div class="anx-cols3">
+        <article class="anx-panel">
+          <h3>创作灵感与工具建议</h3>
+          <ul>
+            <li>写不出开场时，先写「观众在第 8 秒该看到什么」，倒推前三句话。</li>
+            <li>标题建议：动词 + 具体对象 + 意外的数字，比形容词堆叠更有效。</li>
+            <li>剪辑思路：把最安静的三秒留在片尾，观众会替你把情绪说完。</li>
+            <li>声音先行：先铺环境音再配乐，画面会自然长出空间感。</li>
+            <li>企划书模板可在投稿入口下载，支持在线填写与本地保存。</li>
+          </ul>
+        </article>
+        <article class="anx-panel">
+          <h3>企业动态与更新日志</h3>
+          <div class="anx-news">
+            <div class="anx-news__row">
+              <span class="anx-news__date">11-18</span>
+              <div>《碎片档案馆》第二季第4集官方发布<p>同步上线导演评论音轨与分镜稿节选。</p></div>
+            </div>
+            <div class="anx-news__row">
+              <span class="anx-news__date">11-12</span>
+              <div>创作者入驻审核规则更新<p>新增样片完整度与版权声明两项检查项。</p></div>
+            </div>
+            <div class="anx-news__row">
+              <span class="anx-news__date">11-05</span>
+              <div>「一镜到底」挑战赛开启报名<p>投稿截止 12 月 20 日，评审名单已公布。</p></div>
+            </div>
+            <div class="anx-news__row">
+              <span class="anx-news__date">10-28</span>
+              <div>官网视频库完成高清修复第一批<p>共 46 部早期短片升级至 1080P。</p></div>
+            </div>
+          </div>
+        </article>
+        <article class="anx-panel">
+          <h3>合作品牌与伙伴</h3>
+          <div class="anx-partners">
+            <div class="anx-partner">青禾文具<small>周边联名</small></div>
+            <div class="anx-partner">南岸书店<small>线下放映</small></div>
+            <div class="anx-partner">白噪声音乐<small>配乐合作</small></div>
+            <div class="anx-partner">帧间学院<small>课程共建</small></div>
+            <div class="anx-partner">慢速咖啡<small>创作者空间</small></div>
+            <div class="anx-partner">纸片建筑事务所<small>场景设计</small></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- M12 FAQ -->
+  <section class="anx-sec anx-sec--alt" id="anxFaq">
+    <div class="anx-wrap">
+      <div class="anx-sechead">
+        <div class="anx-sechead__text">
+          <span class="anx-kicker">FAQ / 帮助</span>
+          <h2 class="anx-h2">关于9781动漫官网的<em>常见问题</em></h2>
+          <p class="anx-secdesc">以下问题来自创作者与观众的集中咨询，若仍有疑问，可通过页脚联系方式与编辑部沟通。</p>
+        </div>
+      </div>
+
+      <div class="anx-faq">
+        <details open>
+          <summary>9781动漫的作品都是原创正版吗？</summary>
+          <p>官网展示的全部作品均由创作团队授权发布，或由9781动漫自制出品。每条作品页面都标注创作团队与发布记录，修复版、花絮与正片属于同一版权链条，可放心观看与分享。</p>
+        </details>
+        <details>
+          <summary>更新节奏是怎样的？会不会突然断更？</summary>
+          <p>连载剧场固定每周三、周六更新，专题企划按双周节奏推进。若遇制作周期调整，公告条与企业动态会提前发布说明，并在作品页标注新的上线时间。</p>
+        </details>
+        <details>
+          <summary>如何申请成为入驻创作者？</summary>
+          <p>通过「投稿 / 报名」入口提交作品样片、企划书与版权声明即可。审核重点包括样片完整度、原创性与持续更新能力，编辑部会在七个工作日内给出书面反馈，未通过也可按建议修改后再次提交。</p>
+        </details>
+        <details>
+          <summary>观看是否需要付费？高清与 4K 有什么区别？</summary>
+          <p>官网常规内容免费观看，高清为标准清晰度；4K 版本主要面向修复作品与重点企划，需在作品页手动切换清晰度，播放器会根据网络状况给出建议档位。</p>
+        </details>
+        <details>
+          <summary>可以下载作品或剪辑用于二次创作吗？</summary>
+          <p>正片不支持整片下载。若需二次创作，请在作品页查看授权说明，部分作品开放片段素材用于非商业剪辑，需注明出处并保留创作者署名，商业用途请通过页脚联系方式申请。</p>
+        </details>
+        <details>
+          <summary>「一镜到底」挑战赛如何投票与评审？</summary>
+          <p>投票通道面向注册用户开放，每人每日 3 票；专业评审从调度、表演与声音设计三个维度打分。最终结果由人气票与专业评审各占 50% 综合得出，评审手记会在专题页公开。</p>
+        </details>
+        <details>
+          <summary>评论区的内容会被审核吗？</summary>
+          <p>会。社区鼓励具体、有信息量的讨论，禁止人身攻击与未经授权的资源传播。长评若被编辑选中进入专题推荐，会提前与作者沟通并获得许可。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- M13 投稿入口 -->
+  <section class="anx-sec" id="anxSubmit">
+    <div class="anx-wrap">
+      <div class="anx-submit">
+        <div>
+          <span class="anx-kicker" style="color:#ffc857">Submit / 投稿与报名</span>
+          <h2>把你的作品交给9781动漫官网</h2>
+          <p>无论是十分钟的独立短片、一集连载企划，还是一篇幕后手记，我们都愿意认真看完。填写基本信息即可进入初审队列，优秀企划将获得首页推荐、制作资源与专题曝光支持。</p>
+          <div class="anx-hero__actions" style="margin-top:22px">
+            <button class="anx-btn anx-btn--primary" id="anxOpenSubmit">填写投稿信息</button>
+            <button class="anx-btn anx-btn--ghost" id="anxOpenGuide">查看投稿攻略</button>
+          </div>
+        </div>
+        <form class="anx-submit__form" id="anxQuickForm">
+          <input type="text" placeholder="创作者昵称" aria-label="创作者昵称" required>
+          <select aria-label="投稿类型">
+            <option>连载剧场企划</option>
+            <option>独立短片</option>
+            <option>幕后纪录</option>
+            <option>教程与手作</option>
+          </select>
+          <input type="text" placeholder="作品标题（可稍后补充）" aria-label="作品标题">
+          <button class="anx-btn anx-btn--mint" type="submit">提交初审意向</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="anx-footer">
+  <div class="anx-wrap">
+    <div class="anx-footer__grid">
+      <div class="anx-footer__brand">
+        <div class="anx-logo" style="font-size:18px">
+          <span class="anx-logo__mark">97</span>
+          <span style="color:#fff">9781动漫<span class="anx-logo__sub">ANIME VIDEO PORTAL</span></span>
+        </div>
+        <p>9781动漫官方网站 · 原创动画与二次元影像内容平台。持续运营高品质内容生态，以正版高清作品与真实社区连接创作者与观众。</p>
+        <div class="anx-footer__soc">
+          <span title="微信公众号">微</span>
+          <span title="微博">博</span>
+          <span title="哔哩哔哩">B</span>
+          <span title="小红书">红</span>
+        </div>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#anxFocus">精品内容</a></li>
+          <li><a href="#anxVideos">视频库</a></li>
+          <li><a href="#anxTopics">专题企划</a></li>
+          <li><a href="#anxInsight">关键词解读</a></li>
+          <li><a href="#anxAuthors">创作者矩阵</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>品牌与社区</h4>
+        <ul>
+          <li><a href="#anxVoices">榜单与口碑</a></li>
+          <li><a href="#anxAux">企业动态</a></li>
+          <li><a href="#anxFaq">常见问题</a></li>
+          <li><a href="#anxSubmit">投稿与报名</a></li>
+          <li><a href="#anxTop">回到首页顶部</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>联系我们</h4>
+        <ul>
+          <li>商务合作：brand@9781anime.example</li>
+          <li>投稿咨询：creator@9781anime.example</li>
+          <li>媒体联络：press@9781anime.example</li>
+          <li>工作时间：周一至周五 10:00–19:00</li>
+          <li><button class="anx-act" data-share style="border:0;background:transparent;padding:0;color:#9aa3c7">分享本站</button></li>
+        </ul>
+      </div>
+    </div>
+    <div class="anx-footer__bottom">
+      <span>© 2026 9781动漫 官方网站 · 版权所有 · 持续运营中</span>
+      <span>原创内容受版权保护 · 备案号：京ICP备2026009781号-1</span>
+    </div>
+  </div>
+</footer>
+
+<button class="anx-totop" id="anxTopBtn" aria-label="回到顶部">↑</button>
+<div class="anx-toast" id="anxToast" role="status" aria-live="polite"></div>
+
+<div class="anx-modal" id="anxModal" role="dialog" aria-modal="true" aria-labelledby="anxModalTitle">
+  <div class="anx-modal__box">
+    <button class="anx-modal__close" id="anxModalClose" aria-label="关闭弹窗">×</button>
+    <h3 id="anxModalTitle">提示</h3>
+    <div id="anxModalBody"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- 公告条滚动 ---------- */
+  var track = document.getElementById('anxNoticeTrack');
+  var items = track ? Array.prototype.slice.call(track.querySelectorAll('.anx-noticebar__item')) : [];
+  var noticeIdx = 0;
+  if (items.length > 1) {
+    setInterval(function(){
+      items[noticeIdx].classList.remove('is-on');
+      noticeIdx = (noticeIdx + 1) % items.length;
+      items[noticeIdx].classList.add('is-on');
+    }, 4200);
+  }
+  var noticeClose = document.getElementById('anxNoticeClose');
+  var noticeBar = document.getElementById('anxNoticeBar');
+  if (noticeClose) {
+    noticeClose.addEventListener('click', function(){
+      if (noticeBar) noticeBar.style.display = 'none';
+      document.documentElement.style.setProperty('--anx-sticky', '66px');
+    });
+  }
+
+  /* ---------- 移动端导航 ---------- */
+  var burger = document.getElementById('anxBurger');
+  var nav = document.getElementById('anxNav');
+  if (burger && nav) {
+    burger.addEventListener('click', function(){
+      var open = nav.classList.toggle('is-open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if (e.target.tagName === 'A') {
+        nav.classList.remove('is-open');
+        burger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  /* ---------- Toast / Modal ---------- */
+  var toast = document.getElementById('anxToast');
+  var toastTimer = null;
+  function showToast(msg) {
+    if (!toast) return;
+    toast.textContent = msg;
+    toast.classList.add('is-on');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove('is-on'); }, 2400);
+  }
+
+  var modal = document.getElementById('anxModal');
+  var modalTitle = document.getElementById('anxModalTitle');
+  var modalBody = document.getElementById('anxModalBody');
+  function openModal(title, html) {
+    if (!modal) return;
+    modalTitle.textContent = title;
+    modalBody.innerHTML = html;
+    modal.classList.add('is-on');
+  }
+  function closeModal() {
+    if (modal) modal.classList.remove('is-on');
+  }
+  document.getElementById('anxModalClose').addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){ if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeModal(); });
+
+  /* ---------- 分享 ---------- */
+  function openShare() {
+    openModal('分享这条内容',
+      '<p>选择你常用的渠道，把9781动漫的内容分享给同好。</p>' +
+      '<div class="anx-share">' +
+      '<button data-channel="微信">微信</button>' +
+      '<button data-channel="微博">微博</button>' +
+      '<button data-channel="QQ">QQ</button>' +
+      '<button data-channel="复制链接">复制链接</button>' +
+      '</div>');
+    modalBody.querySelectorAll('[data-channel]').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var ch = btn.getAttribute('data-channel');
+        if (ch === '复制链接') {
+          var url = window.location.href;
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(url).then(function(){ showToast('链接已复制，可直接粘贴分享'); })
+              .catch(function(){ showToast('当前浏览器不支持自动复制，请手动复制地址栏链接'); });
+          } else {
+            showToast('当前浏览器不支持自动复制，请手动复制地址栏链接');
+          }
+        } else {
+          showToast('已生成' + ch + '分享卡片，请在客户端粘贴');
+        }
+        closeModal();
+      });
+    });
+  }
+
+  /* ---------- 点赞 / 收藏 ---------- */
+  document.querySelectorAll('[data-like]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var span = btn.querySelector('span');
+      var raw = parseInt(btn.getAttribute('data-count') || '0', 10);
+      var liked = btn.classList.toggle('is-liked');
+      var next = liked ? raw + 1 : raw;
+      btn.setAttribute('data-count', String(next));
+      if (span) {
+        span.textContent = next >= 10000 ? (next / 10000).toFixed(1) + '万' : String(next);
+      }
+      showToast(liked ? '已点赞，感谢支持原创内容' : '已取消点赞');
+    });
+  });
+  document.querySelectorAll('[data-save]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var on = btn.classList.toggle('is-saved');
+      btn.textContent = on ? '★ 已收藏' : '☆ 收藏';
+      showToast(on ? '已加入收藏夹，可在个人中心查看' : '已取消收藏');
+    });
+  });
+
+  /* ---------- 评论按钮 ---------- */
+  document.querySelectorAll('[data-comment]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var target = btn.getAttribute('data-comment');
+      if (target) {
+        var el = document.querySelector(target);
+        if (el) el.scrollIntoView({behavior:'smooth'});
+      }
+      showToast('评论区已展开，欢迎留下你的具体看法');
+    });
+  });
+
+  /* ---------- 分享按钮 ---------- */
+  document.querySelectorAll('[data-share]').forEach(function(btn){
+    btn.addEventListener('click', openShare);
+  });
+
+  /* ---------- 作者档案弹窗 ---------- */
+  document.querySelectorAll('[data-author]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var parts = btn.getAttribute('data-author').split('|');
+      openModal(parts[0],
+        '<p>' + (parts[1] || '') + '</p>' +
+        '<p>该创作者作品均可在官网视频库检索，支持高清播放与收藏；如需合作或转载，请通过页脚联系方式与编辑部沟通。</p>' +
+        '<div class="anx-share"><button data-author-follow>关注创作者</button><button data-author-close>关闭</button></div>');
+      modalBody.querySelector('[data-author-follow]').addEventListener('click', function(){
+        closeModal(); showToast('已关注，更新将出现在你的订阅列表');
+      });
+      modalBody.querySelector('[data-author-close]').addEventListener('click', closeModal);
+    });
+  });
+
+  /* ---------- 焦点播放 ---------- */
+  var playFocus = document.getElementById('anxPlayFocus');
+  if (playFocus) {
+    playFocus.addEventListener('click', function(){
+      showToast('正在加载《碎片档案馆》第二季第4集高清片源…');
+    });
+  }
+
+  /* ---------- 投稿弹窗 ---------- */
+  function openSubmitModal() {
+    openModal('投稿与报名',
+      '<p>填写以下信息进入初审队列，编辑部会在七个工作日内给出书面反馈。请确保提交内容为原创或已获得完整授权。</p>' +
+      '<div class="anx-submit__form" style="margin-top:14px">' +
+      '<input type="text" placeholder="创作者昵称" aria-label="创作者昵称">' +
+      '<input type="text" placeholder="联系邮箱" aria-label="联系邮箱">' +
+      '<input type="text" placeholder="作品标题与一句话简介" aria-label="作品标题与简介">' +
+      '<button class="anx-btn anx-btn--primary" type="button" data-submit-send>提交意向</button>' +
+      '</div>');
+    modalBody.querySelector('[data-submit-send]').addEventListener('click', function(){
+      closeModal(); showToast('投稿意向已提交，请留意邮箱回复');
+    });
+  }
+  var submitHero = document.getElementById('anxOpenSubmitHero');
+  var submitMain = document.getElementById('anxOpenSubmit');
+  if (submitHero) submitHero.addEventListener('click', openSubmitModal);
+  if (submitMain) submitMain.addEventListener('click', openSubmitModal);
+
+  var guideBtn = document.getElementById('anxOpenGuide');
+  if (guideBtn) {
+    guideBtn.addEventListener('click', function(){
+      openModal('投稿攻略',
+        '<p>三件最容易被忽略但影响初审的事：</p>' +
+        '<p>1. 样片请提交完整版本，不要只放高光剪辑；<br>2. 企划书写清「更新周期」与「单集时长」；<br>3. 附上版权声明与团队分工，能显著缩短审核时间。</p>' +
+        '<p>支持高清文件上传与在线预览，较大的工程文件建议附网盘备份说明。</p>');
+    });
+  }
+
+  var quickForm = document.getElementById('anxQuickForm');
+  if (quickForm) {
+    quickForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      showToast('初审意向已记录，后续将由编辑部邮件联系');
+      quickForm.reset();
+    });
+  }
+
+  /* ---------- 搜索前端反馈 ---------- */
+  var searchInput = document.getElementById('anxSearchInput');
+  var searchFeedback = document.getElementById('anxSearchFeedback');
+  var searchIndex = ['碎片档案馆', '星轨邮差', '动态分镜', '雨停之前', '一笔一帧', '城市影像计划', '纸鸢工作室', '南岸影像', '手作黏土', '配乐幕后'];
+  if (searchInput && searchFeedback) {
+    searchInput.addEventListener('input', function(){
+      var q = searchInput.value.trim();
+      if (!q) {
+        searchFeedback.classList.remove('is-on');
+        searchFeedback.innerHTML = '';
+        return;
+      }
+      var hits = searchIndex.filter(function(item){ return item.indexOf(q) !== -1; });
+      if (hits.length) {
+        searchFeedback.innerHTML = '找到 <b>' + hits.length + '</b> 条相关结果：' + hits.slice(0, 4).join('、') + '。按回车查看完整列表。';
+      } else {
+        searchFeedback.innerHTML = '暂未找到与「<b>' + q.replace(/[<>&]/g, '') + '</b>」直接匹配的内容，可尝试更短的关键词，或到视频库按专题浏览。';
+      }
+      searchFeedback.classList.add('is-on');
+    });
+    searchInput.addEventListener('keydown', function(e){
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        var target = document.getElementById('anxVideos');
+        if (target) target.scrollIntoView({behavior:'smooth'});
+        showToast('已为你跳转到视频库，可继续筛选');
+        searchFeedback.classList.remove('is-on');
+      }
+    });
+    document.addEventListener('click', function(e){
+      if (!e.target.closest('.anx-search')) searchFeedback.classList.remove('is-on');
+    });
+  }
+
+  /* ---------- 回到顶部 ---------- */
+  var topBtn = document.getElementById('anxTopBtn');
+  window.addEventListener('scroll', function(){
+    if (!topBtn) return;
+    if (window.scrollY > 620) topBtn.classList.add('is-on');
+    else topBtn.classList.remove('is-on');
+  });
+  if (topBtn) {
+    topBtn.addEventListener('click', function(){
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  }
+})();
+</script>
+</body>
+  </html>
